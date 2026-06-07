@@ -17,13 +17,15 @@ import java.util.Scanner;
 
 public class Main {
 
+
     private static final String DATA_FILE = "admin_store.dat";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         Administrador admin = new Administrador(1, "admin123");
-        // Intentar cargar datos si existe archivo
+        //cargar archivo4
+
         File f = new File(DATA_FILE);
         if (f.exists()) {
             Administrador cargado = Administrador.cargarUltimoAdministrador();

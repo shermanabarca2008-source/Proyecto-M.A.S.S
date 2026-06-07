@@ -10,7 +10,6 @@ public class IndicacionesMedicas implements Serializable {
     private String observaciones;
 
     // Relaciones UML
-    private Medico medico;
     private Cita cita;
 
     // Constructor vacío
@@ -27,7 +26,6 @@ public class IndicacionesMedicas implements Serializable {
         this.diagnostico = diagnostico;
         this.tratamiento = tratamiento;
         this.observaciones = observaciones;
-        this.medico = medico;
         this.cita = cita;
     }
 
@@ -54,14 +52,6 @@ public class IndicacionesMedicas implements Serializable {
 
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
-    }
-
-    public Medico getMedico() {
-        return medico;
-    }
-
-    public void setMedico(Medico medico) {
-        this.medico = medico;
     }
 
     public Cita getCita() {
@@ -101,10 +91,6 @@ public class IndicacionesMedicas implements Serializable {
                 "diagnostico='" + diagnostico + '\'' +
                 ", tratamiento='" + tratamiento + '\'' +
                 ", observaciones='" + observaciones + '\'' +
-                ", medico=" +
-                (medico != null
-                        ? medico.getNombreCompleto()
-                        : "Sin médico") +
                 '}';
     }
 }
